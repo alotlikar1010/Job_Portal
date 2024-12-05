@@ -1,5 +1,5 @@
 
-import {Company} from '../models/company.model';
+import {Company} from '../models/company.model.js';
 export const registerCompany = async( req, res) =>{
     try{
 

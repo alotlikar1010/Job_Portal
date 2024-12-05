@@ -1,11 +1,12 @@
-import {User} from '../models/user.model';
+import {User} from '../models/user.model.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 export const register = async(req, res) =>{
 
     try{
         const {fullname , email , phoneNumber, password , role} = req.body;
-        if(fullname || email ||  phoneNumber || password || role){
+        console.log(fullname , email , phoneNumber, password , role);
+        if(!fullname || !email ||  !phoneNumber || !password || !role){
             return res.status(400).json({
                 message:"Some values are missing",
                 success: false

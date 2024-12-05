@@ -1,8 +1,7 @@
 import express from "express";
-const { login, logout, register, updateProfile } = require('../controllers/userController.js');
-const {isAuthenticated } =require("../middlewares/isAuthenticated.js");
-import { singleUpload } from "../middlewares/mutler.js";
- 
+import { login, logout, register, updateProfile } from "../controllers/userController.js";
+import isAuthenticated from "../middleware/isAuthenticated.js";
+import { singleUpload } from "../middleware/mutler.js";
 const router = express.Router();
 
 router.route("/register").post(singleUpload,register);
