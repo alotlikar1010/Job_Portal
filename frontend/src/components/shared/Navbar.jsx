@@ -2,6 +2,7 @@
 import React from 'react'
 import { Popover ,PopoverContent ,PopoverTrigger} from '../ui/popover'
 import { Avatar ,AvatarImage , AvatarFallback} from '@radix-ui/react-avatar'
+import { Link, useNavigate } from 'react-router-dom'
 const Navbar = () => {
   return (
     <div className='bg-white'>
@@ -15,8 +16,9 @@ const Navbar = () => {
                                     <li><Link to="/admin/companies">Companies</Link></li>
                                     <li><Link to="/admin/jobs">Jobs</Link></li>
                                 </> */}
-                                <li>Home</li>
-                                <li>Jobs</li>
+
+                                <li> <Link to="/"> Home</Link> </li>
+                                <li>  <Link to="/job">Jobs </Link></li>
                                 <li>Browse</li>
 
                     </ul>
